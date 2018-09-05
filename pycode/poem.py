@@ -39,7 +39,7 @@ def get_content(url, kind):
     author_tag = soup.find(class_="source").findAll('a')
     author = author_tag[1].get_text()
 
-    content = soup.find(class_="contson").get_text()
+    content = soup.find(class_="contson").get_text().replace('\n', '')
 
     mean = soup.find(class_="contyishang").find('p').get_text().replace('\n', '')[2:]
     return "('" + title + "','" + author + "','" + content + "','" + mean + "','" + kind + "','" + url + "')"
