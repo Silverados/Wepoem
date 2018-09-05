@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+  logging:
+    config: classpath:log4j2-spring.xml
+---
+spring:
+  profiles: dev
+  datasource:
+    driver: com.mysql.jdbc.Driver
+    url: jdbc:mysql://111.230.50.64:3306/poem?useUnicode=true&useSSL=false
+    user: root
+    password: 123456
+server:
+  port: 8080
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.gdufe.wepoem.entity
+  configuration:
+    map-underscore-to-camel-case: true
