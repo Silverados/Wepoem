@@ -8,9 +8,12 @@ spring:
   profiles: dev
   datasource:
     driver: com.mysql.jdbc.Driver
-    url: jdbc:mysql://111.230.50.64:3306/poem?useUnicode=true&useSSL=false
-    user: root
+    url: jdbc:mysql://111.230.50.64:3306/poem?useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
     password: 123456
+    maxactive: 8
+    minidle: 3
+    maxwait: 50000
 server:
   port: 8080
 

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages={"com.gdufe.wepoem"})
-@MapperScan("com.com.gdufe.wepoem.mapper")
+@MapperScan("com.gdufe.wepoem.mapper")
 public class WepoemApplication {
 
     public static void main(String[] args) {
