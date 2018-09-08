@@ -6,4 +6,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface PoemService {
     String selectAll();
+    String selectByKind(String kind);
 }

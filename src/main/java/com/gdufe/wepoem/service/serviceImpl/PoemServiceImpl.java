@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class PoemSeriveImpl implements PoemService {
+public class PoemServiceImpl implements PoemService {
     @Autowired
     PoemMapper poemMapper;
 
@@ -21,4 +21,12 @@ public class PoemSeriveImpl implements PoemService {
         List<PoemEntity> poemEntities = poemMapper.selectAll();
         return JsonUtil.toJson(poemEntities);
     }
+
+    @Override
+    public String selectByKind(String kind) {
+        List<PoemEntity> poemEntities = poemMapper.selectByKind(kind);
+        return JsonUtil.toJson(poemEntities);
+    }
+
+
 }

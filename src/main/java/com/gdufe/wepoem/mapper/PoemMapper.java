@@ -8,4 +8,5 @@ import java.util.List;
 @Mapper
 public interface PoemMapper {
     List<PoemEntity> selectAll();
+    List<PoemEntity> selectByKind(String kind);
 }
