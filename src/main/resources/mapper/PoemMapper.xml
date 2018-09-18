@@ -6,6 +6,6 @@
     </select>
 
     <select id="selectByKind" parameterType="string" resultType="com.gdufe.wepoem.entity.PoemEntity">
-        SELECT title,author,content,mean,kind FROM primary_school_poem WHERE kind = #{kind}
+        SELECT title,author,content,mean,kind FROM primary_school_poem WHERE kind like CONCAT(#{kind},'%')
     </select>
 </mapper>

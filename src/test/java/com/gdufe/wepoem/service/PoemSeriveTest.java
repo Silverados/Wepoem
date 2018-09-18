@@ -23,4 +23,10 @@ public class PoemSeriveTest {
     public void selectAll() {
         System.out.println(poemService.selectAll());
     }
+
+    @Test
+    public void selectByKind(){
+        String s = poemService.selectByKind("一年级");
+        System.out.println(s);
+    }
 }
