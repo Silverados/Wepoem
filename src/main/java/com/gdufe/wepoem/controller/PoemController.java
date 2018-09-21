@@ -25,4 +25,9 @@ public class PoemController {
     public String getByKind(@RequestBody KindEntity entity) {
         return poemService.selectByKind(entity.getKind());
     }
+
+    @RequestMapping(value = "/randomKind",method = RequestMethod.POST)
+    public String getRandomByKind(@RequestBody KindEntity entity) {
+        return poemService.selectRandomByKind(entity.getKind());
+    }
 }

@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = WepoemApplication.class)
-public class PoemSeriveTest {
+public class PoemServiceTest {
 
 
     @Autowired
@@ -27,6 +27,12 @@ public class PoemSeriveTest {
     @Test
     public void selectByKind(){
         String s = poemService.selectByKind("一年级");
+        System.out.println(s);
+    }
+
+    @Test
+    public void selectRandomByKind(){
+        String s = poemService.selectRandomByKind("一年级");
         System.out.println(s);
     }
 }

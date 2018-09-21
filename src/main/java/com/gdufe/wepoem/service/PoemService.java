@@ -7,4 +7,5 @@ import org.springframework.stereotype.Service;
 public interface PoemService {
     String selectAll();
     String selectByKind(String kind);
+    String selectRandomByKind(String kind);
 }
